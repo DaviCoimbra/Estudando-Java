@@ -22,7 +22,12 @@ public class Turma {
     }
 
     public void setNivel(String niv) {
-        this.nivel = niv;
+        if (niv.equals("básico") || niv.equals("intermediário") || niv.equals("avançado")) {
+            this.nivel = niv;    
+        } else {
+            System.out.println("O nível da turma deve ser básico, intermediário ou avançado");
+        }
+        
     }
 
     public String getTurno() {
@@ -30,7 +35,11 @@ public class Turma {
     }
 
     public void setTurno(String turn) {
-        this.turno = turn;
+        if (turn.equals("manhã") || turn.equals("tarde") || turn.equals("noite") ) {
+            
+        } else {
+            System.out.println("O turno tem que ser manhã, tarde ou noite");
+        }
     }
 
     public static void main(String[] args) {
